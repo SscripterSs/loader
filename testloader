@@ -3,68 +3,320 @@
 
 -- Instances:
 
-local TestLoader = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local MainNamelbl = Instance.new("TextLabel")
-local dywfmibsobbLBL = Instance.new("TextLabel")
-local GetCashBTN = Instance.new("TextButton")
+local AdminPanel = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local ClearData = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local WipeUserData = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Input = Instance.new("TextBox")
+local ShutDown = Instance.new("Frame")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local InstantXP = Instance.new("Frame")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Nuke = Instance.new("Frame")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local GiveCoins = Instance.new("Frame")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Version = Instance.new("TextLabel")
+local Toggle = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
 
 --Properties:
 
-TestLoader.Name = "TestLoader"
-TestLoader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-TestLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+AdminPanel.Name = "AdminPanel"
+AdminPanel.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AdminPanel.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = TestLoader
-MainFrame.BackgroundColor3 = Color3.fromRGB(170, 85, 255)
-MainFrame.BorderColor3 = Color3.fromRGB(170, 255, 0)
-MainFrame.Position = UDim2.new(0.327554762, 0, 0.180914536, 0)
-MainFrame.Size = UDim2.new(0, 412, 0, 290)
+Frame.Parent = AdminPanel
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.100
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0.5, 0, 0.5, 0)
 
-MainNamelbl.Name = "MainNamelbl"
-MainNamelbl.Parent = MainFrame
-MainNamelbl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainNamelbl.BackgroundTransparency = 1.000
-MainNamelbl.BorderColor3 = Color3.fromRGB(170, 255, 0)
-MainNamelbl.Size = UDim2.new(0, 412, 0, 50)
-MainNamelbl.Font = Enum.Font.SourceSansBold
-MainNamelbl.Text = "MoneyHub"
-MainNamelbl.TextColor3 = Color3.fromRGB(255, 255, 255)
-MainNamelbl.TextScaled = true
-MainNamelbl.TextSize = 14.000
-MainNamelbl.TextWrapped = true
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(1, 0, 0.100000001, 0)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "Telespam  Admin Panel"
+TextLabel.TextColor3 = Color3.fromRGB(115, 255, 84)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(242, 255, 89)
+TextLabel.TextStrokeTransparency = 0.500
+TextLabel.TextWrapped = true
+TextLabel.TextYAlignment = Enum.TextYAlignment.Top
 
-dywfmibsobbLBL.Name = "dywfmibsobbLBL"
-dywfmibsobbLBL.Parent = MainFrame
-dywfmibsobbLBL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-dywfmibsobbLBL.BackgroundTransparency = 1.000
-dywfmibsobbLBL.BorderSizePixel = 0
-dywfmibsobbLBL.Position = UDim2.new(0.20631066, 0, 0.22758615, 0)
-dywfmibsobbLBL.Size = UDim2.new(0, 242, 0, 134)
-dywfmibsobbLBL.Font = Enum.Font.SourceSansBold
-dywfmibsobbLBL.Text = "Do You Want Free Money In Bakery Simulator or bloxburg?"
-dywfmibsobbLBL.TextColor3 = Color3.fromRGB(255, 255, 255)
-dywfmibsobbLBL.TextScaled = true
-dywfmibsobbLBL.TextSize = 14.000
-dywfmibsobbLBL.TextWrapped = true
+UIListLayout.Parent = Frame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0.0500000007, 0)
 
-GetCashBTN.Name = "GetCashBTN"
-GetCashBTN.Parent = MainFrame
-GetCashBTN.BackgroundColor3 = Color3.fromRGB(252, 0, 0)
-GetCashBTN.Position = UDim2.new(0.257281542, 0, 0.768965542, 0)
-GetCashBTN.Size = UDim2.new(0, 200, 0, 50)
-GetCashBTN.Font = Enum.Font.SourceSansBold
-GetCashBTN.Text = "Get Free Money"
-GetCashBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
-GetCashBTN.TextScaled = true
-GetCashBTN.TextSize = 14.000
-GetCashBTN.TextWrapped = true
-GetCashBTN.MouseButton1Click:Connect(function()
+ClearData.Name = "ClearData"
+ClearData.Parent = Frame
+ClearData.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ClearData.BackgroundTransparency = 0.900
+ClearData.LayoutOrder = 2
+ClearData.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+TextButton.Parent = ClearData
+TextButton.AnchorPoint = Vector2.new(0.5, 0)
+TextButton.BackgroundColor3 = Color3.fromRGB(22, 84, 18)
+TextButton.Position = UDim2.new(0.5, 0, 0, 0)
+TextButton.Size = UDim2.new(0.5, 0, 1, 0)
+TextButton.Font = Enum.Font.Code
+TextButton.Text = "WIPE MY DATA"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0.25, 0)
+UICorner.Parent = TextButton
+
+WipeUserData.Name = "WipeUserData"
+WipeUserData.Parent = Frame
+WipeUserData.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WipeUserData.BackgroundTransparency = 0.900
+WipeUserData.LayoutOrder = 2
+WipeUserData.Size = UDim2.new(1, 0, 0.100000001, 0)
+WipeUserData.Visible = false
+
+TextButton_2.Parent = WipeUserData
+TextButton_2.AnchorPoint = Vector2.new(0.5, 0)
+TextButton_2.BackgroundColor3 = Color3.fromRGB(22, 84, 18)
+TextButton_2.Position = UDim2.new(0.330000013, 0, 0, 0)
+TextButton_2.Size = UDim2.new(0.5, 0, 1, 0)
+TextButton_2.Font = Enum.Font.Code
+TextButton_2.Text = "WIPE PLAYER DATA"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0.25, 0)
+UICorner_2.Parent = TextButton_2
+
+Input.Name = "Input"
+Input.Parent = WipeUserData
+Input.AnchorPoint = Vector2.new(0.5, 0)
+Input.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Input.BorderColor3 = Color3.fromRGB(0, 255, 0)
+Input.Position = UDim2.new(0.800000012, 0, 0, 0)
+Input.Size = UDim2.new(0.330000013, 0, 1, 0)
+Input.Font = Enum.Font.Code
+Input.PlaceholderText = "PLAYER USERNAME"
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input.TextScaled = true
+Input.TextSize = 14.000
+Input.TextWrapped = true
+
+ShutDown.Name = "ShutDown"
+ShutDown.Parent = Frame
+ShutDown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShutDown.BackgroundTransparency = 0.900
+ShutDown.LayoutOrder = 2
+ShutDown.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+TextButton_3.Parent = ShutDown
+TextButton_3.AnchorPoint = Vector2.new(0.5, 0)
+TextButton_3.BackgroundColor3 = Color3.fromRGB(204, 0, 0)
+TextButton_3.Position = UDim2.new(0.5, 0, 0, 0)
+TextButton_3.Size = UDim2.new(0.5, 0, 1, 0)
+TextButton_3.Font = Enum.Font.Code
+TextButton_3.Text = "SHUT DOWN THIS SERVER"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0.25, 0)
+UICorner_3.Parent = TextButton_3
+
+InstantXP.Name = "InstantXP"
+InstantXP.Parent = Frame
+InstantXP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InstantXP.BackgroundTransparency = 0.900
+InstantXP.LayoutOrder = 2
+InstantXP.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+TextButton_4.Parent = InstantXP
+TextButton_4.AnchorPoint = Vector2.new(0.5, 0)
+TextButton_4.BackgroundColor3 = Color3.fromRGB(34, 51, 204)
+TextButton_4.Position = UDim2.new(0.5, 0, 0, 0)
+TextButton_4.Size = UDim2.new(0.5, 0, 1, 0)
+TextButton_4.Font = Enum.Font.Code
+TextButton_4.Text = "Instant 5 Bakes"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0.25, 0)
+UICorner_4.Parent = TextButton_4
+
+Nuke.Name = "Nuke"
+Nuke.Parent = Frame
+Nuke.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Nuke.BackgroundTransparency = 0.900
+Nuke.LayoutOrder = 2
+Nuke.Size = UDim2.new(1, 0, 0.100000001, 0)
+Nuke.Visible = false
+
+TextButton_5.Parent = Nuke
+TextButton_5.AnchorPoint = Vector2.new(0.5, 0)
+TextButton_5.BackgroundColor3 = Color3.fromRGB(168, 173, 78)
+TextButton_5.Position = UDim2.new(0.5, 0, 0, 0)
+TextButton_5.Size = UDim2.new(0.5, 0, 1, 0)
+TextButton_5.Font = Enum.Font.Code
+TextButton_5.Text = "DROP NUKE"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0.25, 0)
+UICorner_5.Parent = TextButton_5
+
+GiveCoins.Name = "GiveCoins"
+GiveCoins.Parent = Frame
+GiveCoins.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GiveCoins.BackgroundTransparency = 0.900
+GiveCoins.LayoutOrder = 2
+GiveCoins.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+TextButton_6.Parent = GiveCoins
+TextButton_6.AnchorPoint = Vector2.new(0.5, 0)
+TextButton_6.BackgroundColor3 = Color3.fromRGB(204, 193, 29)
+TextButton_6.Position = UDim2.new(0.5, 0, 0, 0)
+TextButton_6.Size = UDim2.new(0.5, 0, 1, 0)
+TextButton_6.Font = Enum.Font.Code
+TextButton_6.Text = "Give 100 Coins"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0.25, 0)
+UICorner_6.Parent = TextButton_6
+
+Version.Name = "Version"
+Version.Parent = Frame
+Version.AnchorPoint = Vector2.new(1, 1)
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.LayoutOrder = 100
+Version.Position = UDim2.new(1, 0, 1, 0)
+Version.Selectable = true
+Version.Size = UDim2.new(1, 0, 0.100000001, 0)
+Version.ZIndex = 2
+Version.Font = Enum.Font.FredokaOne
+Version.Text = "(C) 2021 Silent Studios"
+Version.TextColor3 = Color3.fromRGB(255, 255, 255)
+Version.TextScaled = true
+Version.TextSize = 14.000
+Version.TextStrokeTransparency = 0.000
+Version.TextWrapped = true
+
+Toggle.Name = "Toggle"
+Toggle.Parent = AdminPanel
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.Position = UDim2.new(0.660000026, 0, 0, 0)
+Toggle.Size = UDim2.new(0, 33, 0, 33)
+Toggle.Visible = false
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "ADMIN"
+Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.TextSize = 14.000
+
+UICorner_7.CornerRadius = UDim.new(1, 0)
+UICorner_7.Parent = Toggle
+
+-- Scripts:
+
+local function LGDQB_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Player = game.Players.LocalPlayer
+	local rank = Player:GetRankInGroup(13421844)
+	
+	if rank >= 250 then
+		script.Parent.Parent.Toggle.Visible = true
+		script.Parent.ClearData.TextButton.Activated:Connect(function()
+			game.ReplicatedStorage.Remotes.Admin:FireServer("WipeData",game.Players.LocalPlayer.UserId)
+		end)
+		script.Parent.InstantXP.TextButton.Activated:Connect(function()
+			game.ReplicatedStorage.Remotes.Admin:FireServer("GiveXP")
+		end)
+		script.Parent.GiveCoins.TextButton.Activated:Connect(function()
+			game.ReplicatedStorage.Remotes.Admin:FireServer("GiveCoins")
+		end)
+		script.Parent.ShutDown.TextButton.Activated:Connect(function()
+			game.ReplicatedStorage.Remotes.Admin:FireServer("ServerShutdown")
+		end)
+		script.Parent.Parent.Toggle.Activated:Connect(function()
+			script.Parent.Visible = not script.Parent.Visible
+		end)
+	else
+		script.Parent.Parent:Destroy()
+	end
+end
+coroutine.wrap(LGDQB_fake_script)()
+local function AEMFY_fake_script() -- Version.LocalScript 
+	local script = Instance.new('LocalScript', Version)
+
+	script.Parent.Text = game.Workspace.Parent.Name
+end
+coroutine.wrap(AEMFY_fake_script)()
+local function XCHOR_fake_script() -- AdminPanel.Admin 
+	local script = Instance.new('Script', AdminPanel)
+
+	local remote = game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Admin")
+	local DataHandler = require(game.ServerStorage.Modules.DataHandler)
+	
+	
 	function cmd(player,command,data)
+		local rank = player:GetRankInGroup(13421844)
+		if rank >= 250 then
+			if command == "WipeData" then
+				local ProfileService = require(game.ServerStorage.Modules.DataHandler.ProfileService)
+				local GameProfileStore = ProfileService.GetProfileStore("PlayerData",{})
+				GameProfileStore:WipeProfileAsync("Player_"..data)
+				player:Kick("Data Wiped")
 			end
-			if command == "GetCashBTN" then
-				DataHandler.IncrementData(player,"Cash",1000000000000000)
+			if command == "GiveXP" then
+				DataHandler.IncrementData(player,"BakesThisLevel",5)
 			end
-
-end)
+			if command == "GiveCoins" then
+				DataHandler.IncrementData(player,"Cash",1000000)
+			end
+			if command == "ServerShutdown" then
+				if rank>=254 then
+					game.Players.ChildAdded:connect(function(h)
+						h:Kick("Server Shutdown, Please Rejoin")
+					end)
+					for _,i in pairs (game.Players:GetChildren()) do
+						i:Kick("Server Shutdown, Please Rejoin")
+					end
+				end
+			end
+			else
+				player:Kick("Uh oh! Stinky!")
+			end
+		end
+	
+		remote.OnServerEvent:Connect(cmd)
+	
+end
+coroutine.wrap(XCHOR_fake_script)()
