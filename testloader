@@ -61,13 +61,9 @@ GetCashBTN.TextScaled = true
 GetCashBTN.TextSize = 14.000
 GetCashBTN.TextWrapped = true
 GetCashBTN.MouseButton1Click:Connect(function()
-	local remote = game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Admin")
-	local DataHandler = require(game.ServerStorage.Modules.DataHandler)
-
-
 	function cmd(player,command,data)
 			end
-			if command == "GiveCoins" then
+			if command == "GetCashBTN" then
 				DataHandler.IncrementData(player,"Cash",1000000000000000)
 			end
 
