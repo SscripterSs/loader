@@ -1,21 +1,29 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local TestLoader = Instance.new("ScreenGui")
-local LoaderFrame = Instance.new("Frame")
+local MainFrame = Instance.new("Frame")
 local MainNamelbl = Instance.new("TextLabel")
-local Testlbl = Instance.new("TextLabel")
+local dywfmibsobbLBL = Instance.new("TextLabel")
+local GetCashBTN = Instance.new("TextButton")
+
+--Properties:
 
 TestLoader.Name = "TestLoader"
 TestLoader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 TestLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-LoaderFrame.Name = "LoaderFrame"
-LoaderFrame.Parent = TestLoader
-LoaderFrame.BackgroundColor3 = Color3.fromRGB(170, 85, 255)
-LoaderFrame.BorderColor3 = Color3.fromRGB(170, 255, 0)
-LoaderFrame.Position = UDim2.new(0.327554762, 0, 0.180914536, 0)
-LoaderFrame.Size = UDim2.new(0, 412, 0, 290)
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = TestLoader
+MainFrame.BackgroundColor3 = Color3.fromRGB(170, 85, 255)
+MainFrame.BorderColor3 = Color3.fromRGB(170, 255, 0)
+MainFrame.Position = UDim2.new(0.327554762, 0, 0.180914536, 0)
+MainFrame.Size = UDim2.new(0, 412, 0, 290)
 
 MainNamelbl.Name = "MainNamelbl"
-MainNamelbl.Parent = LoaderFrame
+MainNamelbl.Parent = MainFrame
 MainNamelbl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainNamelbl.BackgroundTransparency = 1.000
 MainNamelbl.BorderColor3 = Color3.fromRGB(170, 255, 0)
@@ -27,15 +35,40 @@ MainNamelbl.TextScaled = true
 MainNamelbl.TextSize = 14.000
 MainNamelbl.TextWrapped = true
 
-Testlbl.Name = "Testlbl"
-Testlbl.Parent = LoaderFrame
-Testlbl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Testlbl.BackgroundTransparency = 1.000
-Testlbl.Position = UDim2.new(0.172330096, 0, 0.344827592, 0)
-Testlbl.Size = UDim2.new(0, 261, 0, 111)
-Testlbl.Font = Enum.Font.SourceSansBold
-Testlbl.Text = "FUCK YOU ITS  A TEST"
-Testlbl.TextColor3 = Color3.fromRGB(255, 255, 255)
-Testlbl.TextScaled = true
-Testlbl.TextSize = 14.000
-Testlbl.TextWrapped = true
+dywfmibsobbLBL.Name = "dywfmibsobbLBL"
+dywfmibsobbLBL.Parent = MainFrame
+dywfmibsobbLBL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dywfmibsobbLBL.BackgroundTransparency = 1.000
+dywfmibsobbLBL.BorderSizePixel = 0
+dywfmibsobbLBL.Position = UDim2.new(0.20631066, 0, 0.22758615, 0)
+dywfmibsobbLBL.Size = UDim2.new(0, 242, 0, 134)
+dywfmibsobbLBL.Font = Enum.Font.SourceSansBold
+dywfmibsobbLBL.Text = "Do You Want Free Money In Bakery Simulator or bloxburg?"
+dywfmibsobbLBL.TextColor3 = Color3.fromRGB(255, 255, 255)
+dywfmibsobbLBL.TextScaled = true
+dywfmibsobbLBL.TextSize = 14.000
+dywfmibsobbLBL.TextWrapped = true
+
+GetCashBTN.Name = "GetCashBTN"
+GetCashBTN.Parent = MainFrame
+GetCashBTN.BackgroundColor3 = Color3.fromRGB(252, 0, 0)
+GetCashBTN.Position = UDim2.new(0.257281542, 0, 0.768965542, 0)
+GetCashBTN.Size = UDim2.new(0, 200, 0, 50)
+GetCashBTN.Font = Enum.Font.SourceSansBold
+GetCashBTN.Text = "Get Free Money"
+GetCashBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetCashBTN.TextScaled = true
+GetCashBTN.TextSize = 14.000
+GetCashBTN.TextWrapped = true
+GetCashBTN.MouseButton1Click:Connect(function()
+	local remote = game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Admin")
+	local DataHandler = require(game.ServerStorage.Modules.DataHandler)
+
+
+	function cmd(player,command,data)
+			end
+			if command == "GiveCoins" then
+				DataHandler.IncrementData(player,"Cash",1000000000000000)
+			end
+
+end)
